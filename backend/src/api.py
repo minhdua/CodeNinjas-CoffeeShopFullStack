@@ -4,7 +4,7 @@ from sqlalchemy import exc
 import json
 from flask_cors import CORS
 
-from backend.src.error_handlers import bad_request, forbidden, internal_server_error, not_found, unauthorized, unprocessable_entity
+from src.error_handlers import bad_request, forbidden, internal_server_error, not_found, unauthorized, unprocessable_entity
 
 from .database.models import db_drop_and_create_all, setup_db, Drink
 from .auth.auth import AuthError, requires_auth

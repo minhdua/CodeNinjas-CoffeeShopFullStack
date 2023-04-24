@@ -5,7 +5,7 @@ from functools import wraps
 from urllib.request import urlopen
 from jose import jwt
 
-from backend.src.error_handlers import forbidden, internal_server_error, unauthorized
+from src.error_handlers import forbidden, internal_server_error, unauthorized
 
 
 AUTH0_DOMAIN = 'dev-nb0vyl86087ztbpp.us.auth0.com'
