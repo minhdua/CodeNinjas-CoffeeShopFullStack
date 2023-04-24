@@ -5,8 +5,8 @@
   "homepage": "https://ionicframework.com/",
   "scripts": {
     "ng": "ng",
-    "start": "SET NODE_OPTIONS=--openssl-legacy-provider && ng serve",
-    "build": "SET NODE_OPTIONS=--openssl-legacy-provider && ng build",
+    "start": "if [[ $OSTYPE == \"msys\" ]]; then SET NODE_OPTIONS=--openssl-legacy-provider && ng serve; else NODE_OPTIONS=--openssl-legacy-provider ng serve; fi",
+    "build": "if [[ $OSTYPE == \"msys\" ]]; then SET NODE_OPTIONS=--openssl-legacy-provider && ng build; else NODE_OPTIONS=--openssl-legacy-provider ng build; fi",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
